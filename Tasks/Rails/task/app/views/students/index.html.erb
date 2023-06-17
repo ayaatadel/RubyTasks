@@ -1,0 +1,16 @@
+<div class="container p-5 ">
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Students</h1>
+
+<div id="students" class="d-flex p-5">
+  <% @students.each do |student| %>
+    <%= render student %>
+    <p>
+      <%= link_to "Show this student", student %>
+    </p>
+  <% end %>
+</div>
+</div>
+
+<%= link_to "New student", new_student_path %>

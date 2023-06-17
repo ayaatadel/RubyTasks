@@ -1,0 +1,18 @@
+<% if notice %>
+  <p class="alert alert-danger" role="alert"><%= notice %></p>
+<% end %>
+<%= form_with url: sessions_path, local: true do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
